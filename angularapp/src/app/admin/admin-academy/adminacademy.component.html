@@ -1,0 +1,31 @@
+<app-nav-admin></app-nav-admin><br>
+<div class="container">
+    <!-- <input type="text" [(ngModel)]="searchdata" placeholder="Search by location" />
+    <button (click)="search()">Search</button> -->
+    <button type="button" routerLink="/admin/viewInstitute/add" class="btn btn-success">Add Institute</button>
+    <br>
+    <br>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let academy of academyList">
+            <div class="card h-100">
+                <img [src]="academy.imgUrl" class="card-img-top" alt="{{ academy.instituteName }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ academy.instituteName }}</h5>
+                    <p class="card-text">
+                    <p><strong>Location: </strong>{{academy.instituteAddress}}</p>
+                    <div>
+                        <button class="btn btn-link" title="Edit">
+                            <i class="fas fa-edit fa" style="color:rgb(2, 147, 236)"></i></button>
+                            <button class="btn btn-link" title="Delete"(click)="deleteRecord(academy.instituteId)">
+                                <i class="fa fa-trash b2 " aria-hidden="true"></i>
+                            </button>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<br>

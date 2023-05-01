@@ -1,0 +1,21 @@
+.card {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(42, 42, 42, 0.2);
+}
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+    opacity: 0.9;
+}
+
+.card-footer button i{
+    font-size: 1.2rem;
+}
+.b2{
+    color:slategray;
+}
+
+.b2:hover{
+    color: rgb(214, 72, 72);
+   
+}
