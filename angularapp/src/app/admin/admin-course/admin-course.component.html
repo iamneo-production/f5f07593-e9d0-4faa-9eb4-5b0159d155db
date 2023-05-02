@@ -1,0 +1,26 @@
+<app-nav-admin></app-nav-admin>
+<br>
+<div class="container">
+  <button type="button" routerLink="/admin/Course/add" class="btn btn-success">Add Course</button>
+  <br><br>
+    <div class="row">
+    <div class="card col-3" *ngFor="let  course of courseList">
+        <div class="card-body">
+          <h5 class="card-title">{{  course.courseName }}</h5>
+          <p class="card-text">
+           <strong>Course Description:</strong> {{  course.courseDescription }}</p>
+          <p class="card-text"><strong>Course Duration:</strong> {{ course.courseDuration}} Hrs</p>
+          <div>
+            <button class="btn btn-link" title="Edit">
+                <i class="fas fa-edit fa" style="color:rgb(2, 147, 236)"></i></button>
+                <button class="btn btn-link" title="Delete"(click)="deleteRecord(course.courseId)">
+                    <i class="fa fa-trash b2 " aria-hidden="true"></i>
+                </button>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- (click)="onRecordClick(courseList)" -->
+    
+    
